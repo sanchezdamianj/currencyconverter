@@ -1,38 +1,314 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&family=Work+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&family=Quicksand:wght@300&family=Work+Sans:wght@700&display=swap');
+
+body {
+  background: #E5E5E5;
+}
+
+.bg-header {
+  position: absolute;
+  width: 100%;
+  height: 480px;
+  left: 0px;
+  top: -20px;
+  background-image: url('./assets/bg.png');
+  background-size: cover;
+  font-size: 34px;
+  color: white;
+  font-weight: 700;
+}
+
+.bg-header h1 {
+  font-family: 'Work Sans', sans-serif;
+  position: absolute;
+  width: 1210px;
+  height: 40px;
+  margin-left: 150px;
+  top: 148px;
+  font-family: 'Work Sans';
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 39.88px;
+  letter-spacing: -2%;
   text-align: center;
+  color: #FFFFFF;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.card {
+  box-sizing: border-box;
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top: 251px;
+  bottom: 0%;
+  background: #FFFFFF;
+  border: 1px solid rgba(231, 234, 243, 0.7);
+  box-shadow: 0px 0px 12px rgba(140, 152, 164, 0.08);
+  border-radius: 8px;
+  height: 522px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card-container {
+  margin: 110px 226px 137px 113px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.result {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: nowrap;
+  width: 465px;
+  height: 472px;
+  left: 730px;
+  top: 10px;
+  right: 283px;
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 50px;
+  color: #323232;
+
 }
 
-.App-link {
-  color: #61dafb;
+.result p {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  color: #757575;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.errorMessage {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  color: rgb(207, 66, 66);
+  animation: errorShowUp 7s infinite;
+}
+
+@keyframes errorShowUp {
+
+  0% {
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  20% {
+    opacity: .3;
+  }
+
+  80% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+input {
+  margin-bottom: 30px;
+  text-align: end;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 16px;
+  gap: 10px;
+  width: 380px;
+  height: 40px;
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+
+}
+
+.currencyOptions {
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 16px;
+  gap: 10px;
+  width: 380px;
+  height: 40px;
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+}
+
+.advice {
+  display: flex;
+  color: #393939;
+  padding: 15px 12px;
+  background: #FCEAC0;
+  border-radius: 8px;
+}
+
+.advice p {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  vertical-align: middle;
+  margin-left: 22px;
+}
+
+.advice .icon {
+  color: #CEA633;
+  margin-right: 8px;
+  height: 16px;
+  width: 16px;
+  position: fixed;
+  margin-top: 12px;
+}
+
+.updates {
+  color: #757575;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  font-style: normal;
+  font-family: 'Quicksand';
+  margin-top: 200px;
+  margin-left: 10px;
+}
+
+.container-curr-button {
+  display: flex;
+  flex-direction: row;
+}
+
+.container-curr-button .btn {
+  display: flex;
+  order: 2;
+  border: none;
+  background: none;
+  margin-left: 24px;
+}
+
+.btn:hover {
+  opacity: .6;
+  box-shadow: #CEA633;
+}
+
+.container-curr-button .currencyOptions {
+  display: flex;
+  order: 1;
+}
+
+.conversion {
+  margin: 10px 0;
+
+}
+
+@media screen and (max-width: 1268px) {
+  .bg-header {
+    position: fixed;
+    top: 0;
+    height: 299px;
+    width: 100%;
+  }
+
+  .bg-header h1 {
+    font-family: 'Quicksand';
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: .1rem;
+    width: 90%;
+    text-align: center;
+    position: initial;
+    margin-left: 20px;
+    margin-top: 34px;
+  }
+
+  .card {
+    position: fixed;
+    top: 140px;
+    height: 600px;
+  }
+
+  .card-container {
+    margin: 22px 16px 0 16px;
+  }
+
+  .card .card-container input {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 10px;
+    padding-right: 10px;
+  }
+
+  .card .card-container .currencyOptions {
+    width: 100%;
+  }
+
+  .container-curr-button {
+    flex-direction: column;
+  }
+
+  .container-curr-button .btn {
+    margin-left: 0;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  .card .card-container .result {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    font-size: 20px;
+    left: 16px;
+    top: 20px;
+    margin-top: 0;
+  }
+
+  .card .card-container .result p {
+    font-size: 14px;
+    font-family: 'Quicksand';
+    font-weight: 700;
+    margin-top: 0;
+  }
+
+  .card .card-container .result .conversion p {
+    margin-top: 0;
+  }
+
+  .updates {
+    display: none;
+  }
+
+  .card-container .advice {
+    position: fixed;
+    max-width: 280px;
+    bottom: 220px;
+    padding-left: 10px;
+    padding-right: 0;
+  }
+
+  .card .card-container .advice p {
+    margin-left: 20px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .card-container .advice .icon {
+    position: fixed;
+    margin-top: 5px;
+
   }
 }
