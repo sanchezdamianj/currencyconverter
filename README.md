@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/11862649/187032388-b9107d4b-7c15-478b-ae44-552212f173f9.png)
+![image](https://user-images.githubusercontent.com/11862649/187032420-2f656385-42d6-401e-8f7f-9a24a001c3c5.png)
 
 Hi 👋 My name is DAMIAN J SANCHEZ
 =================================
